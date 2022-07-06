@@ -1,0 +1,9 @@
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background-color: $color-gray;
+    &__content {
+    }
+}

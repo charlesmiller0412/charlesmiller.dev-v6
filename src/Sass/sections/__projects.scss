@@ -1,0 +1,22 @@
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    padding-top: 5vh;
+    background-color: $color-blue;
+    overflow: hidden;
+    &__content {
+    }
+}
+
+#projectCard {
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    height: 30vh;
+}

@@ -1,0 +1,115 @@
+#home {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background: linear-gradient(
+            0deg,
+            rgb(56, 75, 82, 0.9),
+            rgb(56, 75, 82, 0.9)
+        ),
+        url("/assets/home/homeBGimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    overflow: hidden;
+    & #topRight {
+        position: absolute;
+        top: -25%;
+        right: -5%;
+        height: 40vw;
+        max-height: 500px;
+        min-height: 400px;
+    }
+
+    & #bottomLeft {
+        position: absolute;
+        bottom: -15%;
+        left: -4%;
+    }
+    & #logoDark {
+        display: none;
+    }
+    &__text {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        & span {
+            margin-left: 1.5vw;
+        }
+
+        & h3 {
+            // width: 40%;
+            margin: 1.8rem auto;
+            text-shadow: 1px 2px 3px $color-blue;
+        }
+        & #topStreaks {
+            position: absolute;
+            top: -15%;
+            right: 0%;
+            z-index: 0;
+        }
+        & #bottomStreaks {
+            position: absolute;
+            bottom: -50%;
+            left: 0%;
+            z-index: 0;
+        }
+        &--link {
+            position: absolute;
+            bottom: 50px;
+            right: 10%;
+            text-align: end;
+            &-top {
+                width: 100%;
+                & #rightArrow {
+                    width: 30%;
+                    margin: 0 5% 5% 0;
+                }
+                & a {
+                    &:hover {
+                    }
+                }
+            }
+            & #underline {
+                margin-top: 10px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    #topStreaks,
+    #bottomStreaks {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #home {
+        padding: 0 5vw;
+        & h1 {
+            margin-top: 2vh;
+        }
+        & span {
+            display: block;
+        }
+        &__text--link {
+            bottom: 3vh;
+            right: 3vw;
+        }
+    }
+    #topRight,
+    #bottomLeft {
+        display: none;
+    }
+
+    #home #logoDark {
+        display: flex;
+        margin: auto;
+        position: absolute;
+        top: 8vh;
+    }
+}

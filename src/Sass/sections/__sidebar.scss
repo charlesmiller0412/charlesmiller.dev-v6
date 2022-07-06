@@ -1,0 +1,25 @@
+#sidebar {
+    position: fixed;
+    top: -20vh;
+    left: 81px;
+    text-align: center;
+    &__links {
+        & ul {
+            list-style-type: none;
+            & #line {
+                width: 3px;
+                margin-bottom: 1rem;
+            }
+            & a {
+                display: block;
+                margin-bottom: 1vh;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 919px) {
+    #sidebar {
+        display: none;
+    }
+}
