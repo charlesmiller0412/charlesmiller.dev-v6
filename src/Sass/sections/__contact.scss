@@ -1,7 +1,7 @@
 #contact {
     position: relative;
     display: flex;
-    height: 85vh;
+    height: 90vh;
     background: linear-gradient(
             0deg,
             rgba(18, 37, 43, 0.9),
@@ -125,6 +125,7 @@
             }
         }
         &__form {
+            display: flex;
             height: 50%;
             width: 100%;
             padding: 0;

@@ -193,7 +193,7 @@ body {
 #contact {
   position: relative;
   display: flex;
-  height: 85vh;
+  height: 90vh;
   background: linear-gradient(0deg, rgba(18, 37, 43, 0.9), rgba(18, 37, 43, 0.9)), url("../../assets/contact/bgMain.jpg");
   background-position: center;
   background-size: cover;
@@ -305,6 +305,7 @@ body {
     margin: 0 auto;
   }
   #contact__form {
+    display: flex;
     height: 50%;
     width: 100%;
     padding: 0;
@@ -503,10 +504,21 @@ body {
 @media screen and (max-width: 550px) {
   #mobileNav {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
     position: fixed;
     top: 2%;
     right: 5%;
     overflow: hidden;
+    font-size: 4vh;
+    width: 2rem;
+    height: 2rem;
+    color: #a1dcf0;
+    background-color: #384b52;
+  }
+  #mobileNav__open {
+    display: none;
   }
 }
 #sidebar {

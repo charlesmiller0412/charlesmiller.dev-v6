@@ -4,58 +4,49 @@ import $ from "jquery";
 
 export default class Navbar extends React.Component {
     componentDidMount() {
-        window.addEventListener("load", this.handleLoad);
+        window.addEventListener("scroll", this.handleScroll);
     }
 
     componentWillUnmount() {
-        window.addEventListener("load", this.handleLoad);
+        window.removeEventListener("scroll", this.handleScroll);
     }
 
-    handleLoad = () => {
-        if (window.innerHeight <= "550px") {
-            $("#sidebar").css("display", "none");
-            console.log(window.scrollY);
-            if ((window.scrollY > 728) & (window.scrollY < 2183)) {
-                document.getElementById("navbar").className = "navbar__scroll";
-            } else {
-                document.getElementById("navbar").className = null;
-            }
+    handleScroll = () => {
+        if ((window.scrollY > 728) & (window.scrollY < 2183)) {
+            document.getElementById("navbar").className = "navbar__scroll";
+        } else {
+            document.getElementById("navbar").className = null;
+        }
 
-            var scroll = $(window).scrollTop();
-            var projectsOffset = $("#projects").offset().top - 50;
-            var aboutOffset = $("#about").offset().top - 50;
-            var contactOffset = $("#contact").offset().top - 50;
+        var scroll = $(window).scrollTop();
+        var projectsOffset = $("#projects").offset().top - 50;
+        var aboutOffset = $("#about").offset().top - 50;
+        var contactOffset = $("#contact").offset().top - 50;
 
-            //home
-            if (scroll >= 0 && scroll < projectsOffset) {
-                $("#homeLink").addClass("active");
-                $("#projectsLink").removeClass("active");
-                $("#aboutLink").removeClass("active");
-                $("#contactLink").removeClass("active");
-            }
-            //projects
-            if (scroll >= projectsOffset && scroll < aboutOffset) {
-                $("#projectsLink").addClass("active");
-                $("#aboutLink").removeClass("active");
-                $("#homeLink").removeClass("active");
-            }
-            //about
-            if (scroll >= aboutOffset && scroll < contactOffset) {
-                $("#aboutLink").addClass("active");
-                $("#homeLink").removeClass("active");
-                $("#projectsLink").removeClass("active");
-            }
-            //contact
-            if (scroll >= contactOffset) {
-                $("#contactLink").addClass("active");
-                $("#aboutLink").removeClass("active");
-            }
-
-            if (scroll >= contactOffset - 200) {
-                $("#sidebar").css("display", "none");
-            } else {
-                $("#sidebar").css("display", "flex");
-            }
+        //home
+        if (scroll >= 0 && scroll < projectsOffset) {
+            $("#homeLink").addClass("active");
+            $("#projectsLink").removeClass("active");
+            $("#aboutLink").removeClass("active");
+            $("#contactLink").removeClass("active");
+        }
+        //projects
+        if (scroll >= projectsOffset && scroll < aboutOffset) {
+            $("#projectsLink").addClass("active");
+            $("#aboutLink").removeClass("active");
+            $("#homeLink").removeClass("active");
+        }
+        //about
+        if (scroll >= aboutOffset && scroll < contactOffset) {
+            $("#aboutLink").addClass("active");
+            $("#homeLink").removeClass("active");
+            $("#projectsLink").removeClass("active");
+            $("#contactLink").removeClass("active");
+        }
+        //contact
+        if (scroll >= contactOffset) {
+            $("#contactLink").addClass("active");
+            $("#aboutLink").removeClass("active");
         }
     };
 

@@ -4,9 +4,22 @@
 @media screen and (max-width: 550px) {
     #mobileNav {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
         position: fixed;
         top: 2%;
         right: 5%;
         overflow: hidden;
+        font-size: 4vh;
+        width: 2rem;
+        height: 2rem;
+        color: $color-light-blue;
+        background-color: $color-gray;
+        &__close {
+        }
+        &__open {
+            display: none;
+        }
     }
 }

@@ -7,7 +7,12 @@ export default class MobileNav extends React.Component {
     render() {
         return (
             <div id="mobileNav">
-                <FontAwesomeIcon icon={faBars} />
+                <div id="mobileNav__close">
+                    <FontAwesomeIcon icon={faBars} />
+                </div>
+                <div id="mobileNav__open">
+                    <FontAwesomeIcon icon={faXmark} />
+                </div>
             </div>
         );
     }
