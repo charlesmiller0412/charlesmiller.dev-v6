@@ -13,7 +13,7 @@
 -   jQuery
 -   CSS (no frameworks for an added challenge)
 -   Sass (SCSS) for better CSS organization
--   PHP for contact form
+-   NPM
 
 ---
 
