@@ -50,6 +50,12 @@ export default class Navbar extends React.Component {
         }
     };
 
+    handleSidebar = () => {
+        if (window.innerWidth <= "919px") {
+            $("#sidebar").css("display", "none");
+        }
+    };
+
     render() {
         return (
             <div id="navbar">

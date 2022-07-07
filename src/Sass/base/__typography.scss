@@ -39,6 +39,7 @@ body {
             font-family: $font-proxima;
             font-weight: $font-proxima-bold;
             letter-spacing: 3px;
+            transition: ease-in 0.3s;
             text-shadow: -1px 1px 2px $color-light-blue,
                 1px 1px 2px $color-light-blue, 1px -1px 0 $color-light-blue,
                 -1px -1px 0 $color-light-blue;
@@ -68,11 +69,14 @@ body {
             font-size: 2.5vh;
             color: $color-white;
             &:hover {
+                transition: all ease-in 0.2s;
+
                 filter: drop-shadow(1px 1px 5px $color-light-blue);
             }
             & img {
                 height: 2.5vh;
                 &:hover {
+                    transition: all ease-in 0.2s;
                     filter: drop-shadow(1px 1px 5px $color-light-blue);
                 }
             }
@@ -90,38 +94,42 @@ body {
                 font-weight: $font-proxima-bold;
                 font-size: clamp(32px, 5vw, 60px);
                 letter-spacing: -0.2rem;
+                margin-bottom: 0.5rem;
             }
         }
-        &--list {
-            & h3 {
-                font-family: $font-serenity;
-                font-weight: $font-serenity-bold;
-                font-size: clamp(26px, 4vw, 30px);
-                letter-spacing: 0.2rem;
-            }
-            & ul {
-                margin-left: 3rem;
-                margin-top: 1rem;
-                & li {
-                    letter-spacing: 0.15rem;
-                    font-size: 1.5rem;
-                    margin-bottom: 0.3rem;
-                    &::marker {
-                        line-height: 2px;
-                        color: $color-light-blue;
-                    }
-                    &:nth-of-type(2n)::marker {
-                        color: $color-white;
+        &--group {
+            &-info {
+                & h3 {
+                    font-family: $font-serenity;
+                    font-weight: $font-serenity-bold;
+                    font-size: clamp(18px, 3vw, 45px);
+                    letter-spacing: 0.2rem;
+                    word-wrap: nowrap;
+                }
+                & ul {
+                    margin-left: 2vw;
+                    margin-top: 1rem;
+                    & li {
+                        letter-spacing: 0.15rem;
+                        font-size: clamp(18px, 2.5vw, 24px);
+                        margin-bottom: 0.3rem;
+                        &::marker {
+                            line-height: 2px;
+                            color: $color-light-blue;
+                        }
+                        &:nth-of-type(2n)::marker {
+                            color: $color-white;
+                        }
                     }
                 }
             }
-        }
-        &--links {
-            & ul {
-                list-style-type: none;
-                & a {
-                    font-size: 3vh;
-                    color: $color-white;
+            &-links {
+                & ul {
+                    list-style-type: none;
+                    & a {
+                        font-size: 3vh;
+                        color: $color-white;
+                    }
                 }
             }
         }
@@ -132,29 +140,29 @@ body {
             font-weight: $font-serenity-bold;
             font-size: 1.5rem;
             letter-spacing: 0.1rem;
+            white-space: nowrap;
         }
         & form {
+            caret-color: $color-white;
             & input {
-                caret-color: $color-white;
                 font-family: $font-serenity;
                 font-size: 1.2rem;
                 color: $color-white;
                 &::placeholder {
-                    color: $color-blue;
+                    color: $color-light-blue;
                 }
             }
             & textarea {
-                color: $color-black;
-                caret-color: $color-black;
+                color: $color-white;
                 &::placeholder {
-                    color: $color-blue;
+                    color: $color-light-blue;
                 }
             }
             & #formBtns input {
-                font-size: 1.5vw;
+                font-size: clamp(12px, 1.5vw, 22px);
                 font-family: $font-serenity;
                 font-weight: $font-serenity-normal;
-                color: $color-black;
+                color: $color-blue;
             }
         }
     }
