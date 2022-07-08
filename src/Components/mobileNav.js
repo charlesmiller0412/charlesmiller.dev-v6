@@ -55,7 +55,9 @@ export default function MobileNav() {
             </div>
             <div
                 id="sideMenu"
-                className={`menuNav ${menuOpen ? " showMenu" : ""}`}
+                className={`menuNav ${
+                    menuOpen ? " swing-in-right-fwd" : " swing-out-right-bck"
+                }`}
             >
                 <ul>
                     <a href="#home">
