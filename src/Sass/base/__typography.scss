@@ -6,6 +6,8 @@ body {
 #home__text {
     & h1,
     & h2 {
+        margin: auto;
+        width: 90%;
         font-family: $font-proxima;
         font-weight: $font-proxima-bold;
         color: $color-black;
@@ -25,11 +27,15 @@ body {
 
         -webkit-text-stroke: 0.1px $color-light-blue;
     }
+
     & h3 {
         color: $color-white;
         font-family: $font-serenity;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        width: 80%;
         letter-spacing: 0.2rem;
+        margin: 1rem auto;
+        text-shadow: 1px 2px 3px $color-blue;
     }
     &--link {
         & a {
@@ -97,48 +103,15 @@ body {
                 margin-bottom: 0.5rem;
             }
         }
-        &--group {
-            &-info {
-                & h3 {
-                    font-family: $font-serenity;
-                    font-weight: $font-serenity-bold;
-                    font-size: clamp(18px, 3vw, 45px);
-                    letter-spacing: 0.2rem;
-                    word-wrap: nowrap;
-                }
-                & ul {
-                    margin-left: 2vw;
-                    margin-top: 1rem;
-                    & li {
-                        letter-spacing: 0.15rem;
-                        font-size: clamp(18px, 2.5vw, 24px);
-                        margin-bottom: 0.3rem;
-                        &::marker {
-                            line-height: 2px;
-                            color: $color-light-blue;
-                        }
-                        &:nth-of-type(2n)::marker {
-                            color: $color-white;
-                        }
-                    }
-                }
-            }
-            &-links {
-                & ul {
-                    list-style-type: none;
-                    & a {
-                        font-size: 3vh;
-                        color: $color-white;
-                    }
-                }
-            }
+        &--links {
+            font-size: clamp(20px, 2vw, 24px);
         }
     }
     &__form {
         &--title {
             font-family: $font-serenity;
             font-weight: $font-serenity-bold;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 2vw, 1.5rem);
             letter-spacing: 0.1rem;
             white-space: nowrap;
         }
@@ -146,13 +119,15 @@ body {
             caret-color: $color-white;
             & input {
                 font-family: $font-serenity;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 color: $color-white;
                 &::placeholder {
                     color: $color-light-blue;
                 }
             }
             & textarea {
+                font-family: $font-serenity;
+                font-size: 1rem;
                 color: $color-white;
                 &::placeholder {
                     color: $color-light-blue;
@@ -166,6 +141,17 @@ body {
             }
         }
     }
+    // Sweetalert popup
+    .swal2 {
+        &-popup h2 {
+            color: $color-black;
+        }
+        &-popup button {
+            font-family: $font-serenity;
+            font-weight: $font-serenity-bold;
+            background-color: $color-blue !important;
+        }
+    }
 }
 
 #footer {
@@ -173,15 +159,19 @@ body {
     font-weight: $font-serenity-bold;
     color: $color-black;
 }
-@media screen and (min-width: 550px) {
+
+@media screen and (max-width: 920px) {
+    #home {
+        &__text--link a {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+        }
+    }
 }
 
 @media screen and (max-width: 550px) {
     #home {
         & h1 {
             font-size: 2rem;
-            & span {
-            }
         }
         & h2 {
             font-size: 1.5rem;
@@ -190,45 +180,40 @@ body {
             font-size: 1.3rem;
         }
         & a {
-            font-size: 1.4rem;
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
         }
     }
 
-    #contact {
-        &__form {
-            padding: 0;
-            &--title {
-                display: none;
+    #mobileNav,
+    #mobileNav a {
+        color: $color-white;
+        text-align: center;
+        font-family: $font-serenity;
+        font-weight: $font-serenity-bold;
+        text-decoration: none;
+    }
+    .menuNav {
+        & a {
+            color: $color-white;
+            font-size: 2rem;
+            text-decoration: none;
+            font-family: $font-serenity;
+            font-weight: $font-serenity-bold;
+            & li {
+                margin: 1.5rem;
             }
-            &--form {
-                & input {
-                }
-                & textarea {
-                    width: 100%;
-                }
+        }
+    }
+    #contact {
+        &__text {
+            &--links {
+                white-space: nowrap;
+                font-size: clamp(1.3rem, 2vw, 1.6rem);
             }
         }
     }
 
     #footer {
-        font-size: 4vw;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    #contact {
-        &__text {
-            &--list {
-                & h3 {
-                    font-size: clamp(15px, 3vh, 20px);
-                }
-                & ul li {
-                    font-size: 2.5vh;
-                }
-            }
-        }
-        &__form--form form #formBtns input {
-            font-size: 2vh;
-        }
+        font-size: 3.5vw;
     }
 }

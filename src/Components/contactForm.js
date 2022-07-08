@@ -31,12 +31,7 @@ export default function contactForm() {
 
     return (
         <form onSubmit={handleOnSubmit}>
-            <input
-                type="text"
-                name="from_name"
-                placeholder="First name"
-                required
-            />
+            <input type="text" name="from_name" placeholder="Name" required />
             <input
                 type="email"
                 name="from_email"

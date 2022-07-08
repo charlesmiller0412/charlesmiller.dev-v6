@@ -13,25 +13,13 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 export default function Contact() {
     return (
         <section id="contact">
+            <img src={Arrow} alt="arrow" id="arrow" />
             <div id="contact__text">
                 <div id="contact__text--attention">
                     <h2>Get in touch!</h2>
                 </div>
                 <div id="contact__text--group" className="row">
-                    <div id="contact__text--group-info">
-                        <h3>Available for:</h3>
-                        <ul>
-                            <div>
-                                <li>Work</li>
-                                <li>Ideas</li>
-                            </div>
-                            <div>
-                                <li>Collaboration</li>
-                                <li>Coffee</li>
-                            </div>
-                        </ul>
-                    </div>
-                    <div id="contact__text--group-links">
+                    <div id="contact__text--links">
                         <div className="row">
                             <a href="mailto:charles@charlesmiller.dev">
                                 charles
@@ -73,7 +61,6 @@ export default function Contact() {
             <div id="contact__split"></div>
             <div id="contact__form">
                 <div id="contact__form--title">
-                    <img src={Arrow} alt="arrow" id="arrow" />
                     <h2>Send me a message</h2>
                 </div>
                 <div id="contact__form--form">

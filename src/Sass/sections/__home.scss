@@ -3,32 +3,32 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 60vh;
     background: linear-gradient(
-            0deg,
-            rgb(56, 75, 82, 0.9),
-            rgb(56, 75, 82, 0.9)
+            180deg,
+            rgb(56, 75, 82, 0.8) 8%,
+            rgb(56, 75, 82, 1)
         ),
         url("/assets/home/homeBGimage.jpg");
-    background-size: cover;
-    background-position: center;
+
+    background-size: contain;
     background-repeat: none;
     overflow: hidden;
+
     & #topRight {
         position: absolute;
         top: -25%;
         right: -5%;
-        height: 40vw;
-        max-height: 500px;
-        min-height: 400px;
+        height: 300px;
     }
 
     & #bottomLeft {
         position: absolute;
         bottom: -15%;
         left: -4%;
+        height: 200px;
     }
-    & #logoDark {
+    & #watermark {
         display: none;
     }
     &__text {
@@ -39,11 +39,6 @@
             margin-left: 1.5vw;
         }
 
-        & h3 {
-            // width: 40%;
-            margin: 1.8rem auto;
-            text-shadow: 1px 2px 3px $color-blue;
-        }
         & #topStreaks {
             position: absolute;
             top: -15%;
@@ -58,9 +53,10 @@
         }
         &--link {
             position: absolute;
-            bottom: 50px;
-            right: 10%;
+            bottom: 10px;
+            right: 5vw;
             text-align: end;
+            z-index: 1;
             &-top {
                 width: 100%;
                 & #rightArrow {
@@ -73,22 +69,40 @@
                 }
             }
             & #underline {
-                margin-top: 10px;
-                width: 50%;
+                width: 20vw;
+                max-width: 170px;
+                height: 20px;
             }
         }
     }
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 920px) {
+    #home {
+        &__text--link {
+            bottom: 20px;
+            right: 40px;
+            & #rightArrow {
+                width: 20%;
+            }
+            & #underline {
+                height: 15px;
+                width: 30vw;
+                max-width: 140px;
+            }
+        }
+    }
     #topStreaks,
-    #bottomStreaks {
+    #bottomStreaks,
+    #topRight,
+    #bottomLeft {
         display: none;
     }
 }
 
 @media screen and (max-width: 550px) {
     #home {
+        height: 60vh;
         padding: 0 5vw;
         & h1 {
             margin-top: 2vh;
@@ -97,19 +111,26 @@
             display: block;
         }
         &__text--link {
-            bottom: 3vh;
+            bottom: 1vh;
             right: 3vw;
         }
-    }
-    #topRight,
-    #bottomLeft {
-        display: none;
-    }
+        & #topRight,
+        #bottomLeft {
+            display: none;
+        }
+        & #watermark {
+            display: flex;
+            position: fixed;
 
-    #home #logoDark {
-        display: flex;
-        margin: auto;
-        position: absolute;
-        top: 8vh;
+            top: 10px;
+            left: 10px;
+            width: 25vw;
+        }
+    }
+}
+
+@media screen and (max-height: 750px) {
+    #home #rightArrow {
+        display: none;
     }
 }

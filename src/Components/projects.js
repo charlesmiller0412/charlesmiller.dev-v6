@@ -3,7 +3,7 @@ import ProjectCard from "./projectCard";
 
 export default function Projects() {
     return (
-        <div id="projects" className="section">
+        <section id="projects" className="section">
             <div id="projects__content">
                 <div className="container">
                     <ProjectCard />
@@ -18,6 +18,6 @@ export default function Projects() {
                     <ProjectCard />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

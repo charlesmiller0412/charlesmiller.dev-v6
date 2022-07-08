@@ -7,3 +7,9 @@
 body {
     overflow-x: hidden;
 }
+
+@media screen and (max-width: 550px) {
+    body {
+        margin-bottom: 10vh;
+    }
+}
