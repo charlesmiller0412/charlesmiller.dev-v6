@@ -12,7 +12,7 @@
 -   React.JS
 -   jQuery
 -   CSS (no frameworks for an added challenge)
--   -   BEM (Block Element Modifier)
+-   BEM (Block Element Modifier)
 -   Sass (SCSS) for better CSS organization
 -   NPM
 
