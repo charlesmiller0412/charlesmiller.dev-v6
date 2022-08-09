@@ -1,4 +1,4 @@
-![logo](client/src/assets/logoDark.png)
+![logo](https://charlesmiller.dev/assets/introLogoDark.png)
 
 # Personal Portfolio for Charles Miller
 
@@ -12,6 +12,7 @@
 -   React.JS
 -   jQuery
 -   CSS (no frameworks for an added challenge)
+-   -   BEM (Block Element Modifier)
 -   Sass (SCSS) for better CSS organization
 -   NPM
 
