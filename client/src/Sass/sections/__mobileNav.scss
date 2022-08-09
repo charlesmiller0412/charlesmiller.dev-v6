@@ -1,0 +1,124 @@
+#mobileNav,
+#skillsMobile {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    #mobileNav {
+        color: $color-gray;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        background-color: $color-white;
+        z-index: 99099;
+        opacity: 0;
+        border-radius: 20px 20px 0 0;
+        -webkit-border-radius: 20px 20px 0 0;
+        -moz-border-radius: 20px 20px 0 0;
+        -ms-border-radius: 20px 20px 0 0;
+        -o-border-radius: 20px 20px 0 0;
+        & ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style-type: none;
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            & li {
+                & span {
+                    display: block;
+                }
+            }
+        }
+    }
+    #skillsMobile {
+        display: flex;
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 10vh;
+        height: 50vh;
+        width: 100%;
+        background-color: $color-black;
+        border-top: 4px solid $color-light-blue;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transform: translateY(120%);
+        -webkit-transform: translateY(120%);
+        -moz-transform: translateY(120%);
+        -ms-transform: translateY(120%);
+        -o-transform: translateY(120%);
+        &__content {
+            width: 95%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            &--experience,
+            &--tools {
+                width: 100%;
+                text-align: center;
+                &-title {
+                    position: relative;
+                    margin-bottom: 3vh;
+                    & h2 {
+                        img {
+                            position: absolute;
+                            height: 130%;
+                            width: 45%;
+                            left: 50%;
+                            top: -0.2rem;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+                & img {
+                    width: 8vw;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+#skillsMobile__button {
+    border-radius: 50%;
+    padding: 0.7rem;
+    border: 1px solid rgba(18, 37, 43, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0px 0px 8px $color-black;
+    transition: all 0.2s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    &:active {
+        box-shadow: 0 0 4px $color-black;
+    }
+}
+
+.showSkills {
+    transform: translateY(5%) !important;
+    -webkit-transform: translateY(5%) !important;
+    -moz-transform: translateY(5%) !important;
+    -ms-transform: translateY(5%) !important;
+    -o-transform: translateY(5%) !important;
+}
+
+.activeMobile,
+.activeMobile ul a {
+    color: $color-blue;
+}

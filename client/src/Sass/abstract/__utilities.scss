@@ -1,0 +1,28 @@
+.tooltip {
+    position: relative;
+    background-color: $color-gray;
+    border-radius: 100%;
+    cursor: help;
+    &::after {
+        position: absolute;
+        left: 50%;
+        opacity: 0;
+        transition: all ease 0.3s;
+        content: attr(data-tooltip);
+        background: rgba(0, 0, 0, 1);
+        bottom: -1.3rem;
+        min-width: 4rem;
+        margin-left: -2.5rem;
+        border-radius: 0.4rem;
+        padding: 0.25rem 0.5rem;
+        z-index: 1;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+    &__tall::after {
+        margin-left: -4rem;
+        bottom: -2.25rem;
+        width: 8rem;
+    }
+}

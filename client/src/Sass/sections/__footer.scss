@@ -1,0 +1,13 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vh;
+    background-color: $color-white;
+}
+
+@media screen and (max-width: 550px) {
+    #footer {
+        margin-bottom: 10vh;
+    }
+}

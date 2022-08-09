@@ -1,0 +1,175 @@
+#home {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(
+            180deg,
+            rgb(56, 75, 82, 0.5),
+            rgb(56, 75, 82, 1)
+        ),
+        url("/assets/home/homeBGimage.jpg");
+
+    background-size: cover;
+    background-repeat: none;
+
+    & #topRight {
+        position: absolute;
+        top: -10%;
+        right: -2%;
+        height: 300px;
+    }
+
+    & #bottomLeft {
+        position: absolute;
+        bottom: -8%;
+        left: -4%;
+        height: 200px;
+    }
+    & #watermark {
+        display: none;
+    }
+    &__intro {
+        height: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--text {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 30%;
+            width: 80%;
+            &-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 60%;
+                &-intro {
+                    margin-left: 2vw;
+                    color: $color-blue;
+                }
+            }
+            &-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                text-align: right;
+                width: 35%;
+                &-link {
+                    background-color: $color-blue;
+                    padding: 0.2vw 0.5vw;
+                    border-radius: 7px;
+                    &-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        & span {
+                            margin: 0;
+                        }
+                    }
+                    &:hover {
+                        background-color: $color-light-blue;
+                    }
+                    &:active {
+                        transition-duration: 0.1s;
+                        transform: scale(0.98);
+                        -webkit-transform: scale(0.98);
+                        -moz-transform: scale(0.98);
+                        -ms-transform: scale(0.98);
+                        -o-transform: scale(0.98);
+                    }
+                }
+            }
+        }
+
+        & #topStreaks {
+            position: absolute;
+            top: -15%;
+            right: 0%;
+            z-index: 0;
+        }
+        & #bottomStreaks {
+            position: absolute;
+            bottom: -50%;
+            left: 0%;
+            z-index: 0;
+        }
+    }
+}
+
+#projectCarousel {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    & img {
+        width: 50%;
+    }
+    & .swiper {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #home {
+        top: 0;
+        height: 100vh;
+        & h1 {
+            margin-top: 2vh;
+        }
+        & span {
+            display: block;
+        }
+
+        &__intro {
+            height: 60%;
+
+            &--text {
+                flex-direction: column;
+                text-align: center;
+                width: 70%;
+                &-left {
+                    width: 100%;
+                    height: auto;
+                }
+                &-right {
+                    text-align: center;
+                    width: 100%;
+                    margin-top: 5vh;
+                    &-link {
+                        margin: 5vh auto;
+                    }
+                }
+            }
+        }
+    }
+    #topStreaks,
+    #bottomStreaks,
+    #topRight,
+    #bottomLeft {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #home {
+        height: 100vh;
+        &__intro {
+            &--text {
+                width: 90%;
+                height: 80%;
+            }
+        }
+        & #watermark {
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 10px;
+            width: 25vw;
+        }
+    }
+}
