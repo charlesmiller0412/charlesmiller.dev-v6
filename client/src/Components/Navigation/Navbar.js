@@ -76,6 +76,9 @@ export default class Navbar extends React.Component {
             <div id="navbar">
                 <div id="navbar__img">
                     <a href="#home">
+                        <div id="navbar__img--name">
+                            <h1>Charles Miller</h1>
+                        </div>
                         <img src={Images.logos.logoDark} alt="logo" />
                     </a>
                 </div>
@@ -97,6 +100,7 @@ export default class Navbar extends React.Component {
                         </a>
                     </ul>
                 </div>
+                <hr />
             </div>
         );
     }

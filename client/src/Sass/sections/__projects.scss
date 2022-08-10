@@ -4,12 +4,12 @@
     background-color: $color-gray;
     overflow: hidden;
     display: flex;
+    position: relative;
 }
 
 #projectSwiper {
     width: 90vw;
     margin: auto;
-    height: 60%;
     display: flex;
     align-items: center;
     border-radius: 25px;
@@ -150,9 +150,31 @@
     }
 }
 
+// .swiper-button-prev::after,
+// .swiper-button-next::after {
+//     color: $color-white;
+// }
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-image: url(../../assets/projects/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    color: red;
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    color: $color-white;
+    display: none;
 }
 .swiper-pagination-progressbar {
     position: relative !important;

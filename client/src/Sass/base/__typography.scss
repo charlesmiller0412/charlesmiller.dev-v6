@@ -52,6 +52,12 @@ body {
 }
 
 #navbar {
+    &__img--name h1 {
+        font-family: $font-serenity;
+        font-weight: 400;
+        font-weight: 500;
+        letter-spacing: 0.15rem;
+    }
     &__links {
         & a {
             font-family: $font-serenity;
@@ -59,13 +65,25 @@ body {
             font-size: 1.4rem;
             letter-spacing: -0.5px;
             text-decoration: none;
-            color: $color-blue;
+            color: $color-white;
             &:hover {
                 color: $color-light-blue;
                 text-shadow: 1px 1px 5px $color-black;
             }
         }
     }
+}
+
+#projects h1 {
+    left: 2%;
+    top: -2%;
+    position: absolute;
+    font-size: clamp(2rem, 15vw, 12rem);
+    z-index: 1;
+    font-family: $font-proxima;
+    color: rgba(18, 37, 43, 0.3);
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 #projectSwiper__carousel--content-right {
@@ -224,6 +242,9 @@ body {
             font-size: clamp(1rem, 2vw, 1.4rem);
         }
     }
+    #projects h1 {
+        font-size: clamp(6rem, 12vw, 12rem);
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -273,6 +294,9 @@ body {
         &__content--tools-title h2 {
             color: $color-white;
         }
+    }
+    #projects h1 {
+        display: none;
     }
 
     #about {

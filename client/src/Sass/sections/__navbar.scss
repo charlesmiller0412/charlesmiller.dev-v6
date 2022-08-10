@@ -3,18 +3,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 1.5rem;
     position: fixed;
     width: 100%;
     top: 0;
     background-color: none;
     backdrop-filter: blur(5px);
     z-index: 10;
-
     &__img {
+        & a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            color: $color-white;
+        }
+
         & img {
+            margin-left: 0.5rem;
             display: flex;
-            height: 4vh;
+            height: 2.5vh;
         }
     }
     &__links {
@@ -23,11 +30,11 @@
             & a {
                 margin: 0 3vw;
                 &:hover {
-                    transition: 0.2s;
-                    -webkit-transition: 0.2s;
-                    -moz-transition: 0.2s;
-                    -ms-transition: 0.2s;
-                    -o-transition: 0.2s;
+                    transition: all 0.2s;
+                    -webkit-transition: all 0.2s;
+                    -moz-transition: all 0.2s;
+                    -ms-transition: all 0.2s;
+                    -o-transition: all 0.2s;
                 }
                 & li {
                     list-style-type: none;
@@ -35,18 +42,27 @@
             }
         }
     }
+    & hr {
+        width: 95%;
+        color: $color-white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 .active {
     animation: underline;
     animation-duration: 0.5s;
-    transition: underline 1s;
+    transition: underline 0.5s;
     border-bottom: 2px solid $color-light-blue;
-    -webkit-animation: underline;
-    -webkit-transition: underline 1s;
-    -moz-transition: underline 1s;
-    -ms-transition: underline 1s;
-    -o-transition: underline 1s;
+    -webkit-animation: underline 1s;
+    -webkit-transition: underline 0.5s;
+    -moz-transition: underline 0.5s;
+    -ms-transition: underline 0.5s;
+    -o-transition: underline 0.5s;
 }
 
 @keyframes underline {

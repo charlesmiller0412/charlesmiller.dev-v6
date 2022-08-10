@@ -45,17 +45,35 @@ body {
   text-shadow: -1px 1px 2px #efefef, 1px 1px 2px #efefef, 1px -1px 0 #efefef, -1px -1px 0 #efefef;
 }
 
+#navbar__img--name h1 {
+  font-family: serenity, sans-serif;
+  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+}
 #navbar__links a {
   font-family: serenity, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: -0.5px;
   text-decoration: none;
-  color: #7eaecd;
+  color: #efefef;
 }
 #navbar__links a:hover {
   color: #a1dcf0;
   text-shadow: 1px 1px 5px #12252b;
+}
+
+#projects h1 {
+  left: 2%;
+  top: -2%;
+  position: absolute;
+  font-size: clamp(2rem, 15vw, 12rem);
+  z-index: 1;
+  font-family: proxima-nova, sans-serif;
+  color: rgba(18, 37, 43, 0.3);
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 #projectSwiper__carousel--content-right h2 {
@@ -185,6 +203,9 @@ body {
   #home__intro--text-link a {
     font-size: clamp(1rem, 2vw, 1.4rem);
   }
+  #projects h1 {
+    font-size: clamp(6rem, 12vw, 12rem);
+  }
 }
 @media screen and (max-width: 550px) {
   #home h1 {
@@ -228,6 +249,9 @@ body {
   }
   #skillsMobile__content--tools-title h2 {
     color: #efefef;
+  }
+  #projects h1 {
+    display: none;
   }
   #about__top {
     padding: 0 5vw;
@@ -320,6 +344,7 @@ body {
   justify-content: space-evenly;
   display: flex;
   width: 100%;
+  max-width: 110rem;
 }
 #about__bottom--skills .tooltip {
   background-color: #12252b;
@@ -439,8 +464,8 @@ body {
 #contact #arrow {
   position: absolute;
   max-width: 5rem;
-  top: 26%;
-  right: 41.5vw;
+  top: 28%;
+  right: 41vw;
   z-index: 3;
 }
 #contact__text {
@@ -685,6 +710,7 @@ body {
   bottom: -8%;
   left: -4%;
   height: 200px;
+  z-index: 1;
 }
 #home #watermark {
   display: none;
@@ -830,12 +856,12 @@ body {
   background-color: #384b52;
   overflow: hidden;
   display: flex;
+  position: relative;
 }
 
 #projectSwiper {
   width: 90vw;
   margin: auto;
-  height: 60%;
   display: flex;
   align-items: center;
   border-radius: 25px;
@@ -971,9 +997,26 @@ body {
   -o-transform: translateX(-100%);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: url(../../assets/projects/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  color: red;
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: #efefef;
+  display: none;
 }
 
 .swiper-pagination-progressbar {
@@ -1089,7 +1132,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 1.5rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -1097,9 +1140,16 @@ body {
   backdrop-filter: blur(5px);
   z-index: 10;
 }
+#navbar__img a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  color: #efefef;
+}
 #navbar__img img {
+  margin-left: 0.5rem;
   display: flex;
-  height: 4vh;
+  height: 2.5vh;
 }
 #navbar__links ul {
   display: inline-flex;
@@ -1108,26 +1158,35 @@ body {
   margin: 0 3vw;
 }
 #navbar__links ul a:hover {
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 #navbar__links ul a li {
   list-style-type: none;
+}
+#navbar hr {
+  width: 95%;
+  color: #efefef;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .active {
   animation: underline;
   animation-duration: 0.5s;
-  transition: underline 1s;
+  transition: underline 0.5s;
   border-bottom: 2px solid #a1dcf0;
-  -webkit-animation: underline;
-  -webkit-transition: underline 1s;
-  -moz-transition: underline 1s;
-  -ms-transition: underline 1s;
-  -o-transition: underline 1s;
+  -webkit-animation: underline 1s;
+  -webkit-transition: underline 0.5s;
+  -moz-transition: underline 0.5s;
+  -ms-transition: underline 0.5s;
+  -o-transition: underline 0.5s;
 }
 
 @keyframes underline {
@@ -1273,6 +1332,11 @@ body {
 .activeMobile,
 .activeMobile ul a {
   color: #7eaecd;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .tooltip {
