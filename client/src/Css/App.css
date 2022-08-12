@@ -1047,6 +1047,7 @@ body {
   overflow: hidden;
   display: flex;
   position: relative;
+  padding-top: 10vh;
 }
 
 #projectSwiper {
