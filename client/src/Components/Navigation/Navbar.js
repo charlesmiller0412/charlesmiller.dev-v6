@@ -16,7 +16,6 @@ export default class Navbar extends React.Component {
         var projectsOffset = $("#projects").offset().top - 50;
         var aboutOffset = $("#about").offset().top - 50;
         var contactOffset = $("#contact").offset().top - 50;
-        var aboutBottomOffset = $("#about__bottom").offset().top - 50;
 
         //home
         if (scroll >= 0 && scroll < projectsOffset) {
