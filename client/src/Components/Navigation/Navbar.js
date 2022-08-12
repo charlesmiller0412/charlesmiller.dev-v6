@@ -57,13 +57,7 @@ export default class Navbar extends React.Component {
             $("#contactLink").addClass("active");
             $("#aboutLink").removeClass("active");
         }
-        // about navbar color change {
-        if (scroll >= aboutOffset && scroll < aboutBottomOffset) {
-            $("#navbar").css("background-color", "#12252B");
-        } else {
-            $("#navbar").css("background-color", "");
-        }
-
+        // show mobileNav after scroll
         if (scroll >= 50) {
             $("#mobileNav").css({ opacity: "1", transition: "all .3s" });
         } else {
@@ -74,14 +68,13 @@ export default class Navbar extends React.Component {
     render() {
         return (
             <div id="navbar">
+                {/* logo */}
                 <div id="navbar__img">
                     <a href="#home">
-                        <div id="navbar__img--name">
-                            <h1>Charles Miller</h1>
-                        </div>
-                        <img src={Images.logos.logoDark} alt="logo" />
+                        <img src={Images.logos.logo} alt="logo" />
                     </a>
                 </div>
+                {/* links */}
                 <div id="navbar__links">
                     <ul>
                         <a href="#home">
@@ -100,7 +93,6 @@ export default class Navbar extends React.Component {
                         </a>
                     </ul>
                 </div>
-                <hr />
             </div>
         );
     }

@@ -48,8 +48,12 @@
                 list-style-type: none;
                 background-color: $color-gray;
                 border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
                 padding: 0.7rem;
-                & img {
+                &img {
                     margin: 0;
                     width: auto;
                     min-width: 1.5rem;
@@ -116,10 +120,11 @@
                     border: 1px solid $color-black;
                     border-bottom: 3px solid $color-white;
                     background-color: #384b52;
-                    height: 7vh;
+                    height: 10vh;
                     margin-top: 2vh;
                     width: 50%;
                     border-radius: 10px 10px 5px 5px;
+                    display: flex;
                     &:focus {
                         outline: none;
                         border-bottom: 3px solid $color-blue;
@@ -256,4 +261,26 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    #contact {
+        height: 96.5vh;
+        flex-direction: row;
+        &__text {
+            height: 100%;
+        }
+        &__form {
+            height: 100%;
+            &--form {
+                & form input,
+                form textarea {
+                    width: 80%;
+                }
+                & #formBtns {
+                    margin-top: 5vh;
+                }
+            }
+        }
+    }
 }

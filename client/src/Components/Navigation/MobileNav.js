@@ -56,6 +56,7 @@ export default function MobileNav() {
                     </a>
                 </ul>
             </div>
+
             <div id="skillsMobile" className={skillsOpen ? "showSkills" : ""}>
                 <div id="skillsMobile__content">
                     {/* top experience */}

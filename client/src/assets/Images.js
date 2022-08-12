@@ -20,6 +20,7 @@ const IMAGES = {
         productPreview: require("../assets/projects/productPreview.png"),
         profileCard: require("../assets/projects/profileCard.png"),
         weather: require("../assets/projects/weather.png"),
+        weatherCover: require("../assets/projects/weatherCover.png"),
     },
     about: {
         myPhoto: require("../assets/about/myPhoto.png"),
@@ -33,6 +34,7 @@ const IMAGES = {
         linkedIn: require("../assets/contact/linkedin.png"),
         orWritten: require("../assets/contact/orWritten.png"),
         underline: require("../assets/contact/underline.png"),
+        planets: require("../assets/contact/planets.json"),
     },
     icons: {
         afterEffects: require("../assets/icons/AfterEffects.png"),

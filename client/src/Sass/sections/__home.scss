@@ -114,7 +114,7 @@
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 950px) and (orientation: portrait) {
     #home {
         top: 0;
         height: 100vh;
@@ -155,7 +155,7 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) and (orientation: portrait) {
     #home {
         height: 100vh;
         &__intro {
@@ -171,6 +171,43 @@
             top: 10px;
             left: 10px;
             width: 25vw;
+        }
+    }
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    #home {
+        height: 100vh;
+        &__intro {
+            height: 70%;
+            &--text {
+                width: 90%;
+                height: 70%;
+                &-left {
+                    justify-content: space-evenly;
+                }
+                &-right {
+                    justify-content: space-evenly;
+                    width: 55%;
+                }
+            }
+        }
+        & #watermark {
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 10px;
+            width: 25vw;
+        }
+        #projectCarousel {
+            & img {
+                width: 40%;
+            }
+        }
+        #topRight,
+        #bottomLeft {
+            display: none;
         }
     }
 }

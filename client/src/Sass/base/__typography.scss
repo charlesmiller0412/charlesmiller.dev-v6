@@ -65,11 +65,45 @@ body {
             font-size: 1.4rem;
             letter-spacing: -0.5px;
             text-decoration: none;
-            color: $color-white;
+            color: $color-black;
             &:hover {
-                color: $color-light-blue;
-                text-shadow: 1px 1px 5px $color-black;
+                color: $color-blue;
             }
+        }
+    }
+}
+
+#overlay {
+    &__featuredProject {
+        &--homeLink {
+            font-size: 1.5rem;
+        }
+        &--text {
+            & h3,
+            h5 {
+                letter-spacing: 0.1rem;
+                font-family: $font-serenity;
+                backdrop-filter: blur(3px);
+                user-select: none;
+            }
+            & h3 {
+                font-size: clamp(2rem, 5vw, 3rem);
+                white-space: nowrap;
+                font-weight: $font-serenity-bold;
+            }
+            & h5 {
+                font-size: clamp(1.2rem, 3.5vw, 2rem);
+                font-weight: $font-serenity-normal;
+            }
+        }
+    }
+    &__contactInfo {
+        font-size: clamp(1.5rem, 1.5vw, 2rem);
+    }
+    &__links {
+        & ul a {
+            font-size: 3.5rem;
+            font-weight: $font-serenity-bold;
         }
     }
 }
@@ -109,7 +143,12 @@ body {
         font-weight: $font-serenity-bold;
         text-decoration: none;
         &:hover {
-            // color: $color-light-blue;
+            color: $color-light-blue;
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
         }
     }
 }
@@ -136,10 +175,6 @@ body {
             & p {
                 font-size: clamp(0.7rem, 1.5vw, 1rem);
                 color: $color-black;
-                & ul {
-                    & li {
-                    }
-                }
             }
         }
     }
@@ -242,12 +277,15 @@ body {
             font-size: clamp(1rem, 2vw, 1.4rem);
         }
     }
+    #navbar__links a {
+        font-size: 3vw;
+    }
     #projects h1 {
         font-size: clamp(6rem, 12vw, 12rem);
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) and (orientation: portrait) {
     #home {
         & h1 {
             font-size: 2rem;
@@ -319,5 +357,73 @@ body {
 
     #footer {
         font-size: 2.5vw;
+    }
+}
+
+// LANDSCAPE
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    #home {
+        & h1 {
+            font-size: clamp(1.7rem, 3vw, 2.5rem);
+        }
+        & h2 {
+            // margin-top: 2vh;
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+        }
+
+        & h3 {
+            font-size: clamp(0.8rem, 1vh, 1.5rem);
+        }
+
+        & a {
+            font-size: 1rem;
+        }
+    }
+
+    #projectSwiper__carousel--content-right {
+        & h2 {
+            font-size: clamp(1rem, 4.5vw, 2.5rem);
+        }
+        & p {
+            font-size: clamp(0.8rem, 1vw, 1.3rem);
+        }
+        & ul {
+            & li {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    #about {
+        &__top {
+            &--text {
+                & h2 {
+                    font-size: clamp(1.4rem, 2vw, 3rem);
+                    line-height: 3vw;
+                }
+                & h3 {
+                    font-size: clamp(1rem, 1.75vw, 1.3rem);
+                    line-height: 2.5vw;
+                }
+                & h5 {
+                    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+                }
+                & ul li {
+                    font-size: clamp(0.7rem, 1vw, 1rem);
+                }
+                & p {
+                    font-size: clamp(0.7rem, 1vw, 1rem);
+                }
+            }
+        }
+        &__bottom {
+            & h2 {
+                font-size: 3.5vh;
+            }
+
+            & .tooltip::after {
+                font-size: 1.4vh;
+            }
+        }
     }
 }

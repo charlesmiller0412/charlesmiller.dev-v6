@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,7 +26,6 @@ export default function ProjectSwiper() {
             );
             const json = await response.json();
             setProjects(json);
-            console.log("fetched projects");
             return;
         } catch (err) {
             console.error(err.message);

@@ -3,12 +3,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1.5rem;
+    padding: 0 7rem 0 1.5rem;
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: none;
-    backdrop-filter: blur(5px);
+    background-color: $color-white;
+    // backdrop-filter: blur(5px);
     z-index: 10;
     &__img {
         & a {
@@ -28,7 +28,12 @@
         & ul {
             display: inline-flex;
             & a {
-                margin: 0 3vw;
+                margin: 0 2vw;
+                transition: all 0.2s;
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                -ms-transition: all 0.2s;
+                -o-transition: all 0.2s;
                 &:hover {
                     transition: all 0.2s;
                     -webkit-transition: all 0.2s;
@@ -42,22 +47,13 @@
             }
         }
     }
-    & hr {
-        width: 95%;
-        color: $color-white;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
 }
 
 .active {
     animation: underline;
     animation-duration: 0.5s;
     transition: underline 0.5s;
-    border-bottom: 2px solid $color-light-blue;
+    border-bottom: 2px solid $color-blue;
     -webkit-animation: underline 1s;
     -webkit-transition: underline 0.5s;
     -moz-transition: underline 0.5s;
@@ -74,7 +70,13 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) and (orientation: portrait) {
+    #navbar {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
     #navbar {
         display: none;
     }
