@@ -5,6 +5,7 @@ const IMAGES = {
         watermark: require("../assets/logos/watermark-transparent.png"),
         loadingLogo: require("../assets/logos/loadingLogo.json"),
         loadingBar: require("../assets/logos/loadingBar.json"),
+        error: require("../assets/errorDino.json"),
     },
     home: {
         topright: require("../assets/home/topRight.png"),
