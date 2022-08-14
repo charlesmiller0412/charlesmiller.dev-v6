@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Images from "../../assets/Images";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,17 +12,21 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 export default function MobileNav() {
     const [skillsOpen, setSkillsOpen] = useState();
 
+    const closeSkills = () => {
+        setSkillsOpen(false);
+    };
+
     return (
         <>
             <div id="mobileNav">
                 <ul>
-                    <a href="#home">
+                    <a href="#home" onClick={closeSkills}>
                         <li className="activeMobile" id="mobileHomeLink">
                             <FontAwesomeIcon icon={faHouse} />
                             <span>Home</span>
                         </li>
                     </a>
-                    <a href="#projects">
+                    <a href="#projects" onClick={closeSkills}>
                         <li id="mobileProjectsLink">
                             <FontAwesomeIcon icon={faFolderClosed} />
                             <span>Portfolio</span>
@@ -41,14 +45,14 @@ export default function MobileNav() {
 
                         <span>Skills</span>
                     </li>
-                    <a href="#about">
+                    <a href="#about" onClick={closeSkills}>
                         <li id="mobileAboutLink">
                             <FontAwesomeIcon icon={faUser} />
                             <span>About</span>
                         </li>
                     </a>
 
-                    <a href="#contact__text--attention">
+                    <a href="#contact__text--attention" onClick={closeSkills}>
                         <li id="mobileContactLink">
                             <FontAwesomeIcon icon={faComment} />
                             <span>Hire Me</span>
