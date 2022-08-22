@@ -120,72 +120,17 @@ body {
         user-select: none;
         -webkit-touch-callout: none;
     }
-    & h3 {
-        color: $color-white;
-        display: flex;
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
+    &__databaseLink {
+        & h3 {
+            color: $color-white;
+            font-size: clamp(0.6rem, 2vw, 1.5rem);
+        }
         & a {
             color: $color-blue;
-            margin-left: 1rem;
             text-decoration: none;
-            overflow: hidden;
-            width: 100px;
-            display: inline-block;
-            transition: all 0.2s;
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.2s;
-            -ms-transition: all 0.2s;
-            -o-transition: all 0.2s;
-            &::before {
-                content: "";
-                display: block;
-                position: relative;
-                width: 100%;
-                left: -100%;
-                border-top: 1px solid $color-white;
-                transition: all 0.4s;
-                -o-transition: all 0.4s;
-                -webkit-transition: all 0.4s;
-                -moz-transition: all 0.4s;
-                -ms-transition: all 0.4s;
-            }
-            &::after {
-                content: "";
-                display: block;
-                position: relative;
-                width: 100%;
-                border-bottom: 1px solid $color-white;
-                right: -101%;
-                transition: all 0.4s;
-                -o-transition: all 0.4s;
-                -webkit-transition: all 0.4s;
-                -moz-transition: all 0.4s;
-                -ms-transition: all 0.4s;
-            }
+            font-weight: $font-serenity-bold;
             &:hover {
                 color: $color-light-blue;
-
-                &::before {
-                    transform: translateX(100%);
-                    -webkit-transform: translateX(100%);
-                    -moz-transform: translateX(100%);
-                    -ms-transform: translateX(100%);
-                    -o-transform: translateX(100%);
-                }
-                &::after {
-                    transform: translateX(-101%);
-                    -webkit-transform: translateX(-101%);
-                    -moz-transform: translateX(-101%);
-                    -ms-transform: translateX(-101%);
-                    -o-transform: translateX(-101%);
-                }
             }
         }
     }
@@ -246,6 +191,11 @@ body {
             & p {
                 font-size: clamp(0.7rem, 1.5vw, 1rem);
                 color: $color-black;
+            }
+            & ul {
+                & li {
+                    font-size: clamp(0.7rem, 1.5vw, 1rem);
+                }
             }
         }
     }
@@ -351,8 +301,10 @@ body {
     #navbar__links a {
         font-size: 3vw;
     }
-    #projects h1 {
-        font-size: clamp(6rem, 12vw, 12rem);
+    #projects {
+        & h1 {
+            font-size: clamp(6rem, 12vw, 12rem);
+        }
     }
 }
 
@@ -404,8 +356,11 @@ body {
             color: $color-white;
         }
     }
-    #projects h1 {
-        display: none;
+    #projects {
+        position: relative;
+        & h1 {
+            display: none;
+        }
     }
 
     #about {

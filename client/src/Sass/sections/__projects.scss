@@ -7,11 +7,70 @@
     position: relative;
     padding-top: 10vh;
     flex-direction: column;
+    &__databaseLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        & a {
+            margin-left: 1rem;
+            overflow: hidden;
+            width: 100px;
+            display: inline-block;
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            &::before {
+                content: "";
+                display: block;
+                position: relative;
+                width: 100%;
+                left: -100%;
+                border-top: 1px solid $color-white;
+                transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -ms-transition: all 0.4s;
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: relative;
+                width: 100%;
+                border-bottom: 1px solid $color-white;
+                right: -101%;
+                transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -ms-transition: all 0.4s;
+            }
+            &:hover {
+                &::before {
+                    transform: translateX(100%);
+                    -webkit-transform: translateX(100%);
+                    -moz-transform: translateX(100%);
+                    -ms-transform: translateX(100%);
+                    -o-transform: translateX(100%);
+                }
+                &::after {
+                    transform: translateX(-101%);
+                    -webkit-transform: translateX(-101%);
+                    -moz-transform: translateX(-101%);
+                    -ms-transform: translateX(-101%);
+                    -o-transform: translateX(-101%);
+                }
+            }
+        }
+    }
 }
 
 #projectSwiper {
     width: 90vw;
-    margin: auto;
+    margin: 15vh auto;
     display: flex;
     align-items: center;
     border-radius: 25px;
@@ -182,6 +241,14 @@
 }
 
 @media screen and (max-width: 950px) and (orientation: portrait) {
+    #projects {
+        & h1 {
+            top: 5%;
+        }
+        &__databaseLink {
+            height: 100%;
+        }
+    }
     #projectCarousel {
         width: 100%;
         & img {
@@ -190,6 +257,7 @@
     }
     #projectSwiper {
         width: 100%;
+        margin: 0 auto;
         & .swiper-slide {
             margin: 0;
             height: 80vh !important;
@@ -271,6 +339,18 @@
 @media screen and (max-width: 550px) and (orientation: portrait) {
     #projects {
         height: 90vh !important;
+        position: relative;
+        &__databaseLink {
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            height: auto;
+            & a {
+                margin: 0;
+            }
+        }
     }
     #projectSwiper {
         height: 85%;

@@ -101,73 +101,17 @@ body {
   user-select: none;
   -webkit-touch-callout: none;
 }
-#projects h3 {
+#projects__databaseLink h3 {
   color: #efefef;
-  display: flex;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  font-size: clamp(0.6rem, 2vw, 1.5rem);
 }
-#projects h3 a {
+#projects__databaseLink a {
   color: #7eaecd;
-  margin-left: 1rem;
   text-decoration: none;
-  overflow: hidden;
-  width: 100px;
-  display: inline-block;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
+  font-weight: 700;
 }
-#projects h3 a::before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  left: -100%;
-  border-top: 1px solid #efefef;
-  transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-}
-#projects h3 a::after {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #efefef;
-  right: -101%;
-  transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-}
-#projects h3 a:hover {
+#projects__databaseLink a:hover {
   color: #a1dcf0;
-}
-#projects h3 a:hover::before {
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-}
-#projects h3 a:hover::after {
-  transform: translateX(-101%);
-  -webkit-transform: translateX(-101%);
-  -moz-transform: translateX(-101%);
-  -ms-transform: translateX(-101%);
-  -o-transform: translateX(-101%);
 }
 
 #projectSwiper__carousel--content-right h2 {
@@ -220,6 +164,9 @@ body {
 #about__top--text p {
   font-size: clamp(0.7rem, 1.5vw, 1rem);
   color: #12252b;
+}
+#about__top--text ul li {
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
 }
 #about__bottom {
   position: relative;
@@ -355,6 +302,9 @@ body {
   }
   #skillsMobile__content--tools-title h2 {
     color: #efefef;
+  }
+  #projects {
+    position: relative;
   }
   #projects h1 {
     display: none;
@@ -584,7 +534,7 @@ body {
     line-height: 2rem;
   }
   #about__top--image {
-    top: 0;
+    top: 10px;
     right: 1rem;
     position: absolute;
     width: 20%;
@@ -1118,10 +1068,67 @@ body {
   padding-top: 10vh;
   flex-direction: column;
 }
+#projects__databaseLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+#projects__databaseLink a {
+  margin-left: 1rem;
+  overflow: hidden;
+  width: 100px;
+  display: inline-block;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+#projects__databaseLink a::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  left: -100%;
+  border-top: 1px solid #efefef;
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+}
+#projects__databaseLink a::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  right: -101%;
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+}
+#projects__databaseLink a:hover::before {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+#projects__databaseLink a:hover::after {
+  transform: translateX(-101%);
+  -webkit-transform: translateX(-101%);
+  -moz-transform: translateX(-101%);
+  -ms-transform: translateX(-101%);
+  -o-transform: translateX(-101%);
+}
 
 #projectSwiper {
   width: 90vw;
-  margin: auto;
+  margin: 15vh auto;
   display: flex;
   align-items: center;
   border-radius: 25px;
@@ -1288,6 +1295,12 @@ body {
 }
 
 @media screen and (max-width: 950px) and (orientation: portrait) {
+  #projects h1 {
+    top: 5%;
+  }
+  #projects__databaseLink {
+    height: 100%;
+  }
   #projectCarousel {
     width: 100%;
   }
@@ -1296,6 +1309,7 @@ body {
   }
   #projectSwiper {
     width: 100%;
+    margin: 0 auto;
   }
   #projectSwiper .swiper-slide {
     margin: 0;
@@ -1373,6 +1387,18 @@ body {
 @media screen and (max-width: 550px) and (orientation: portrait) {
   #projects {
     height: 90vh !important;
+    position: relative;
+  }
+  #projects__databaseLink {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    height: auto;
+  }
+  #projects__databaseLink a {
+    margin: 0;
   }
   #projectSwiper {
     height: 85%;
