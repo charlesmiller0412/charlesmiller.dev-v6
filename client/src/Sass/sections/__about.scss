@@ -2,15 +2,13 @@
     width: 100%;
     background-color: $color-gray;
     padding-top: 5vh;
-    height: 100vh;
+    height: 105vh;
 
     &__top {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40vw;
-        max-height: 45vh;
-        min-height: 24.5rem;
+        height: 45%;
         background-color: $color-white;
         &--text {
             margin-left: 5vw;
@@ -59,6 +57,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        &--info-text {
+            position: absolute;
+            bottom: 30%;
+            color: transparent;
+        }
         &--skills {
             justify-content: space-evenly;
             display: flex;
@@ -111,6 +115,14 @@
         }
         &__bottom {
             height: 55%;
+            &--info-text {
+                display: flex;
+                position: absolute;
+                bottom: 12%;
+                color: transparent;
+                font-size: clamp(1rem, 1vw, 1.2rem);
+                font-weight: $font-serenity-bold;
+            }
 
             &--skills {
                 justify-content: space-evenly;
@@ -139,6 +151,18 @@
                     width: 80%;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 950px) and (orientation: landscape) {
+    #about__bottom {
+        &--info-text {
+            display: flex;
+            position: absolute;
+            bottom: 12%;
+            color: transparent;
+            font-size: clamp(1rem, 1vw, 1.2rem);
+            font-weight: $font-serenity-bold;
         }
     }
 }
@@ -200,14 +224,22 @@
         height: 100vh;
 
         &__top {
-            min-height: 75%;
+            min-height: 70%;
             & h3 {
                 width: 100%;
             }
         }
         &__bottom {
-            height: 25%;
-            align-items: flex-end;
+            height: 30%;
+            padding-top: 1rem;
+            align-items: flex-start;
+            &--info-text {
+                display: flex;
+                position: absolute;
+                bottom: 2%;
+                color: transparent;
+                font-size: clamp(0.8rem, 1vw, 1rem);
+            }
             &--skills {
                 justify-content: space-evenly;
                 align-items: center;
@@ -242,5 +274,31 @@
                 }
             }
         }
+    }
+}
+.txt-shine {
+    background: linear-gradient(
+        to right,
+        $color-black 0,
+        $color-blue 5%,
+        $color-black 95%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    animation: shine 6s infinite linear;
+    -webkit-animation: shine 6s infinite linear;
+    position: relative;
+}
+
+@keyframes shine {
+    0% {
+        background-position-x: -500%;
+    }
+    100% {
+        background-position-x: 500%;
     }
 }

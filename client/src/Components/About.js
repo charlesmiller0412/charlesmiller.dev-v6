@@ -225,6 +225,9 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+                <span id="about__bottom--info-text" className="txt-shine">
+                    (Hover or tap on an icon for more info)
+                </span>
             </div>
         </section>
     );
