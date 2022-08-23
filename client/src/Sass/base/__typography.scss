@@ -128,6 +128,7 @@ body {
         color: transparent;
         user-select: none;
         -webkit-touch-callout: none;
+        -webkit-text-stroke: 1px $color-light-blue;
     }
     &__databaseLink {
         & h3 {
