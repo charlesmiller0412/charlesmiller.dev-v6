@@ -12,7 +12,7 @@ export default function About() {
                     <h2>Charles Miller</h2>
                     <h3>Web Developer | UX/UI Designer</h3>
                     <p>
-                        My long time passion has been to create fun and
+                        My long-time passion has been to create fun and
                         attractive websites using the appropriate project
                         lifecycle and the latest technologies. I use my interest
                         for design and my knowledge of code to bring the most
@@ -30,8 +30,8 @@ export default function About() {
                     <h5>If you're still reading...</h5>
                     <p>
                         I spent my early adult life serving as a firefighter in
-                        the US Military until deciding to pursue true passion in
-                        web development as a career. I am now able to combine
+                        the US Military until deciding to pursue my true passion
+                        in web development as a career. I am now able to combine
                         the Air Force core values (Integrity, Service, and
                         Excellence) with my own (Ambition, Detail Oriented,
                         Professional, and Compassion) in order to be a great
