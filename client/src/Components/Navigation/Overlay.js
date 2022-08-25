@@ -48,7 +48,7 @@ export default function Overlay() {
                         <img src={Images.logos.logo} alt="logo" />
                     </a>
                     <a
-                        href="https://www.charlesmiller.dev/weather-app/"
+                        href="https://www.charlesmiller.dev/projectDatabase/"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -56,7 +56,7 @@ export default function Overlay() {
 
                         <div id="overlay__featuredProject--text">
                             <h3>Featured Project</h3>
-                            <h5>Reactive Weather</h5>
+                            <h5>MERN Project Database</h5>
                         </div>
                     </a>
                 </div>
