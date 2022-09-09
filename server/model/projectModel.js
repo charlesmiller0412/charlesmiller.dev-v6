@@ -26,6 +26,9 @@ const projectSchema = new Schema({
         type: Boolean,
         required: true,
     },
+    list: {
+        type: String,
+    },
 });
 
 module.exports = mongoose.model("Project", projectSchema);
