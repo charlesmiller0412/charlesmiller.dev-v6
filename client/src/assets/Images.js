@@ -22,6 +22,7 @@ const IMAGES = {
         profileCard: require("../assets/projects/profileCard.png"),
         weather: require("../assets/projects/weather.png"),
         weatherCover: require("../assets/projects/weatherCover.png"),
+        easybankLanding: require("../assets/projects/easybankLanding.png"),
     },
     about: {
         myPhoto: require("../assets/about/myPhoto.png"),

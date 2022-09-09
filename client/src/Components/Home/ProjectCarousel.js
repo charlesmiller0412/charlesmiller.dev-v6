@@ -58,8 +58,8 @@ export default function ProjectCarousel() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
-                        src={Images.projects.dutchBros}
-                        alt="Dutch Bros UX/UI Study"
+                        src={Images.projects.easybankLanding}
+                        alt="Easybank Landing Page"
                     />
                 </SwiperSlide>
             </Swiper>
