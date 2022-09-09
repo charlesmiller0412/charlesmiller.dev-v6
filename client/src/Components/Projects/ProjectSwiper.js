@@ -36,7 +36,9 @@ export default function ProjectSwiper() {
 
     const fetchProjects = async () => {
         try {
-            const response = await fetch("http://localhost:5001/api/projects");
+            const response = await fetch(
+                "https://millerportfolioprojects.herokuapp.com/api/projects"
+            );
             const json = await response.json();
             setProjects(json);
             setLoading(false);
