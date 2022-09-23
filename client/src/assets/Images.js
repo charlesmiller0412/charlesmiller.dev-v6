@@ -73,6 +73,10 @@ const IMAGES = {
         vsCode: require("../assets/icons/VSCode.png"),
         wordpress: require("../assets/icons/Wordpress.png"),
         xd: require("../assets/icons/xd.png"),
+        next: require("../assets/icons/NextJS.png"),
+        vercel: require("../assets/icons/Vercel.png"),
+        tailwind: require("../assets/icons/TailwindCSS.png"),
+        typescript: require("../assets/icons/TypeScript.png"),
     },
 };
 

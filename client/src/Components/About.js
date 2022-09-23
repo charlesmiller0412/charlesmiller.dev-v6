@@ -59,14 +59,14 @@ export default function About() {
                                     alt="JavaScript"
                                 />
                             </span>
+                            <span className="tooltip" data-tooltip="TypeScript">
+                                <img
+                                    src={Images.icons.typescript}
+                                    alt="TypeScript"
+                                />
+                            </span>
                             <span className="tooltip" data-tooltip="MongoDB">
                                 <img src={Images.icons.mongoDB} alt="MongoDB" />
-                            </span>
-                            <span className="tooltip" data-tooltip="Express.JS">
-                                <img
-                                    src={Images.icons.expressJS}
-                                    alt="Express.JS"
-                                />
                             </span>
                             <span className="tooltip" data-tooltip="React.JS">
                                 <img
@@ -74,14 +74,20 @@ export default function About() {
                                     alt="React.JS"
                                 />
                             </span>
+                            <span className="tooltip" data-tooltip="Next.JS">
+                                <img src={Images.icons.next} alt="Next.JS" />
+                            </span>
+                            <span className="tooltip" data-tooltip="Express.JS">
+                                <img
+                                    src={Images.icons.expressJS}
+                                    alt="Express.JS"
+                                />
+                            </span>
                             <span className="tooltip" data-tooltip="Node.JS">
                                 <img src={Images.icons.nodeJS} alt="Node.JS" />
                             </span>
                             <span className="tooltip" data-tooltip="jQuery">
                                 <img src={Images.icons.jquery} alt="jQuery" />
-                            </span>
-                            <span className="tooltip" data-tooltip="JSON">
-                                <img src={Images.icons.jsonIcon} alt="JSON" />
                             </span>
                         </div>
                         <div className="row">
@@ -92,6 +98,15 @@ export default function About() {
                                 <img
                                     src={Images.icons.bootstrap}
                                     alt="Bootstrap"
+                                />
+                            </span>
+                            <span
+                                className="tooltip"
+                                data-tooltip="TailwindCSS"
+                            >
+                                <img
+                                    src={Images.icons.tailwind}
+                                    alt="TailwindCSS"
                                 />
                             </span>
                             <span className="tooltip" data-tooltip="Git">
@@ -105,6 +120,9 @@ export default function About() {
                             </span>
                             <span className="tooltip" data-tooltip="Java">
                                 <img src={Images.icons.java} alt="Java" />
+                            </span>
+                            <span className="tooltip" data-tooltip="JSON">
+                                <img src={Images.icons.jsonIcon} alt="JSON" />
                             </span>
                             <span className="tooltip" data-tooltip="Bash">
                                 <img src={Images.icons.bash} alt="Bash" />
@@ -173,6 +191,9 @@ export default function About() {
                             </span>
                         </div>
                         <div className="row">
+                            <span className="tooltip" data-tooltip="Vercel">
+                                <img src={Images.icons.vercel} alt="Vercel" />
+                            </span>
                             <span className="tooltip" data-tooltip="Figma">
                                 <img src={Images.icons.figma} alt="Figma" />
                             </span>

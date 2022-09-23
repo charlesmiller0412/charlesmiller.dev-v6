@@ -472,8 +472,11 @@ body {
   height: fit-content;
 }
 #about__bottom--skills-list {
-  width: 50%;
+  width: 60%;
   position: relative;
+}
+#about__bottom--skills-list:last-of-type {
+  width: 45%;
 }
 #about__bottom--skills-list h2 {
   position: absolute;
@@ -494,7 +497,7 @@ body {
   margin-top: 0;
 }
 #about__bottom--skills .row img {
-  width: 5vw;
+  width: 3.5vw;
   max-width: 2.5rem;
   margin: 0 0.5vh;
 }
@@ -515,6 +518,7 @@ body {
     font-weight: 700;
   }
   #about__bottom--skills {
+    margin-top: -3vh;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
@@ -524,6 +528,12 @@ body {
   }
   #about__bottom--skills-list {
     width: 100%;
+  }
+  #about__bottom--skills-list:last-of-type {
+    width: 100%;
+  }
+  #about__bottom--skills-list .row img {
+    width: 5vw;
   }
   #about__bottom--skills h2 {
     position: static;
@@ -1695,7 +1705,7 @@ body {
     transform: translateX(-50%);
   }
   #skillsMobile__content--experience img, #skillsMobile__content--tools img {
-    width: 8vw;
+    width: 7vw;
     margin-bottom: 0.5rem;
   }
 }
@@ -1844,7 +1854,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://github.com/charlesmiller0412/projectDatabase/blob/main/projectDatabase.png?raw=true");
+  background: url("https://github.com/charlesmiller0412/planet_fact_site/blob/master/Project%20Display%20Images/planetDesktopScreenshot.png?raw=true");
   background-position: center;
   background-size: cover;
   transition: all 1s;

@@ -81,24 +81,33 @@ export default function MobileNav() {
                                 src={Images.icons.javascript}
                                 alt="JavaScript"
                             />
+                            <img
+                                src={Images.icons.typescript}
+                                alt="TypeScript"
+                            />
                             <img src={Images.icons.mongoDB} alt="MongoDB" />
+                            <img src={Images.icons.reactIcon} alt="React.JS" />
+                            <img src={Images.icons.next} alt="Next.JS" />
                             <img
                                 src={Images.icons.expressJS}
                                 alt="Express.JS"
                             />
-                            <img src={Images.icons.reactIcon} alt="React.JS" />
                             <img src={Images.icons.nodeJS} alt="Node.JS" />
                             <img src={Images.icons.jquery} alt="jQuery" />
-                            <img src={Images.icons.jsonIcon} alt="JSON" />
                         </div>
                         <div className="row">
                             <img src={Images.icons.sass} alt="Sass" />
                             <img src={Images.icons.bootstrap} alt="Bootstrap" />
+                            <img
+                                src={Images.icons.tailwind}
+                                alt="TailwindCSS"
+                            />
                             <img src={Images.icons.git} alt="Git" />
                             <img src={Images.icons.php} alt="PHP" />
                             <img src={Images.icons.python} alt="Python" />
                             <img src={Images.icons.java} alt="Java" />
                             <img src={Images.icons.bash} alt="Bash" />
+                            <img src={Images.icons.jsonIcon} alt="JSON" />
                             <img src={Images.icons.markdown} alt="Markdown" />
                             <img src={Images.icons.restAPI} alt="Rest API" />
                         </div>
@@ -133,6 +142,7 @@ export default function MobileNav() {
                             <img src={Images.icons.google} alt="Google" />
                         </div>
                         <div className="row">
+                            <img src={Images.icons.vercel} alt="Vercel" />
                             <img src={Images.icons.figma} alt="Figma" />
                             <img src={Images.icons.photoshop} alt="Photoshop" />
                             <img

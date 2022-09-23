@@ -56,7 +56,7 @@ export default function Overlay() {
 
                         <div id="overlay__featuredProject--text">
                             <h3>Featured Project</h3>
-                            <h5>MERN Project Database</h5>
+                            <h5>Planet Facts App</h5>
                         </div>
                     </a>
                 </div>
