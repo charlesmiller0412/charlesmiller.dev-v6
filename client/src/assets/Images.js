@@ -23,6 +23,7 @@ const IMAGES = {
         weather: require("../assets/projects/weather.png"),
         weatherCover: require("../assets/projects/weatherCover.png"),
         easybankLanding: require("../assets/projects/easybankLanding.png"),
+        planetFacts: require("../assets/projects/planetFactSite.png"),
     },
     about: {
         myPhoto: require("../assets/about/myPhoto.png"),

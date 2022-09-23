@@ -36,6 +36,15 @@ export default function ProjectCarousel() {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
+                    <img src={Images.projects.planetFacts} alt="Planet Facts" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img
+                        src={Images.projects.easybankLanding}
+                        alt="Easybank Landing Page"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
                     <img src={Images.projects.insure} alt="Insure Website" />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -48,18 +57,6 @@ export default function ProjectCarousel() {
                     <img
                         src={Images.projects.expenseChart}
                         alt="Expense Chart Application"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        src={Images.projects.profileCard}
-                        alt="Profile Card Component"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        src={Images.projects.easybankLanding}
-                        alt="Easybank Landing Page"
                     />
                 </SwiperSlide>
             </Swiper>
