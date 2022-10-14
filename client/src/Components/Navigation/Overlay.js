@@ -48,7 +48,7 @@ export default function Overlay() {
                         <img src={Images.logos.logo} alt="logo" />
                     </a>
                     <a
-                        href="https://www.charlesmiller.dev/projectDatabase/"
+                        href="https://planet-fact-site-n7oo.vercel.app"
                         target="_blank"
                         rel="noreferrer"
                     >
