@@ -1,8 +1,8 @@
 #about {
     width: 100%;
     background-color: $color-gray;
-    padding-top: 5vh;
-    height: 105vh;
+    padding-top: 3vh;
+    height: 100vh;
 
     &__top {
         display: flex;
@@ -15,7 +15,8 @@
             width: 40%;
             & h3 {
                 border-bottom: 1px solid $color-blue;
-                width: 60%;
+                width: 85%;
+                margin-bottom: 3vh;
             }
             & p {
                 margin: 1vh 0 0 0;

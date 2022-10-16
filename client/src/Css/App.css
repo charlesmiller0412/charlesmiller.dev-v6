@@ -54,7 +54,7 @@ body {
 #navbar__links a {
   font-family: serenity, sans-serif;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: -0.5px;
   text-decoration: none;
   color: #12252b;
@@ -399,8 +399,8 @@ body {
 #about {
   width: 100%;
   background-color: #384b52;
-  padding-top: 5vh;
-  height: 105vh;
+  padding-top: 3vh;
+  height: 100vh;
 }
 #about__top {
   display: flex;
@@ -415,7 +415,8 @@ body {
 }
 #about__top--text h3 {
   border-bottom: 1px solid #7eaecd;
-  width: 60%;
+  width: 85%;
+  margin-bottom: 3vh;
 }
 #about__top--text p {
   margin: 1vh 0 0 0;
@@ -1535,7 +1536,7 @@ body {
   }
 }
 #navbar {
-  height: 5vh;
+  height: 3vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1555,7 +1556,7 @@ body {
 #navbar__img img {
   margin-left: 0.5rem;
   display: flex;
-  height: 2.5vh;
+  height: 2vh;
 }
 #navbar__links ul {
   display: inline-flex;
@@ -1804,12 +1805,13 @@ body {
 #overlay__close {
   position: fixed;
   z-index: 11;
-  top: 1.25vh;
+  top: 0.25vh;
   right: 4vw;
   cursor: pointer;
 }
 #overlay__close--icon {
   color: #7eaecd;
+  width: 1.5rem;
 }
 #overlay__featuredProject {
   z-index: 0;

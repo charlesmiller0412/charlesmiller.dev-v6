@@ -32,7 +32,7 @@ export default function Home() {
                             </span>
                         </h1>
                         <h2>
-                            A Front-end Developer
+                            A Full Stack Developer, Software Engineer,
                             <br /> &amp; UX/UI Designer
                         </h2>
                     </div>

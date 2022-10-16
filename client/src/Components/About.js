@@ -10,7 +10,7 @@ export default function About() {
                 </div>
                 <div id="about__top--text">
                     <h2>Charles Miller</h2>
-                    <h3>Web Developer | UX/UI Designer</h3>
+                    <h3>Web Developer | Software Engineer | UX/UI Designer</h3>
                     <p>
                         My long-time passion has been to create fun and
                         attractive websites using the appropriate project
@@ -27,15 +27,13 @@ export default function About() {
                             <li>progressive change and behaviorisms</li>
                         </ul>
                     </div>
-                    <h5>If you're still reading...</h5>
+                    <h5>
+                        Have a project idea or need freelance web work
+                        performed?
+                    </h5>
                     <p>
-                        I spent my early adult life serving as a firefighter in
-                        the US Military until deciding to pursue my true passion
-                        in web development as a career. I am now able to combine
-                        the Air Force core values (Integrity, Service, and
-                        Excellence) with my own (Ambition, Detail Oriented,
-                        Professional, and Compassion) in order to be a great
-                        asset to any team.
+                        Feel free to contact me through any of the platforms
+                        below with project details.
                     </p>
                 </div>
             </div>

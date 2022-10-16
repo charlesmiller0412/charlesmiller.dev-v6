@@ -11,11 +11,12 @@
     &__close {
         position: fixed;
         z-index: 11;
-        top: 1.25vh;
+        top: 0.25vh;
         right: 4vw;
         cursor: pointer;
         &--icon {
             color: $color-blue;
+            width: 1.5rem;
         }
     }
     &__featuredProject {
