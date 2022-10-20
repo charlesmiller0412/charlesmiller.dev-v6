@@ -123,35 +123,48 @@ body {
   color: #a1dcf0;
 }
 
-#projectSwiper__carousel--content-right h2 {
+#projectSwiper__carousel--content-right h2,
+#projectSwiper__carousel--content-right-mobile h2 {
   font-size: clamp(1.2rem, 5vw, 2.5rem);
-  color: #efefef;
+  color: #a1dcf0;
 }
-#projectSwiper__carousel--content-right p {
+#projectSwiper__carousel--content-right p,
+#projectSwiper__carousel--content-right-mobile p {
   font-size: clamp(1rem, 1vw, 1.3rem);
   color: #efefef;
   text-indent: 1rem;
 }
-#projectSwiper__carousel--content-right ul {
+#projectSwiper__carousel--content-right ul,
+#projectSwiper__carousel--content-right-mobile ul {
   text-indent: 0;
 }
-#projectSwiper__carousel--content-right ul li {
+#projectSwiper__carousel--content-right ul li,
+#projectSwiper__carousel--content-right-mobile ul li {
   color: #384b52;
   font-size: 0.8rem;
   font-weight: 700;
 }
-#projectSwiper__carousel--content-right-links a {
+#projectSwiper__carousel--content-right-links a,
+#projectSwiper__carousel--content-right-mobile-links a {
   color: #7eaecd;
   font-weight: 700;
   text-decoration: none;
 }
-#projectSwiper__carousel--content-right-links a:hover {
+#projectSwiper__carousel--content-right-links a:hover,
+#projectSwiper__carousel--content-right-mobile-links a:hover {
   color: #a1dcf0;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
+}
+#projectSwiper__carousel--content-right button,
+#projectSwiper__carousel--content-right-mobile button {
+  text-transform: uppercase;
+  color: #12252b;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
 }
 
 #about__top--text h2 {
@@ -1083,6 +1096,9 @@ body {
   #home {
     height: 100vh;
   }
+  #home__intro {
+    height: 55%;
+  }
   #home__intro--text {
     width: 90%;
     height: 80%;
@@ -1226,6 +1242,7 @@ body {
   display: flex;
   width: 40%;
   align-items: center;
+  position: relative;
 }
 #projectSwiper__carousel--content-left img {
   margin: auto;
@@ -1234,6 +1251,75 @@ body {
   max-width: 20rem;
   max-height: 16rem;
   border-radius: 3px;
+}
+#projectSwiper__carousel--content-left-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5vw;
+  width: 50%;
+  place-items: center;
+}
+#projectSwiper__carousel--content-left-links a {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 125px;
+  text-decoration: none;
+  transition: all 0.2s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  white-space: nowrap;
+  color: #7eaecd;
+}
+#projectSwiper__carousel--content-left-links a::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  left: -100%;
+  border-top: 1px solid #efefef;
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+}
+#projectSwiper__carousel--content-left-links a::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  right: -101%;
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+}
+#projectSwiper__carousel--content-left-links a .icon {
+  position: absolute;
+  right: 1rem;
+  bottom: 10%;
+}
+#projectSwiper__carousel--content-left-links a:hover::before {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+#projectSwiper__carousel--content-left-links a:hover::after {
+  transform: translateX(-101%);
+  -webkit-transform: translateX(-101%);
+  -moz-transform: translateX(-101%);
+  -ms-transform: translateX(-101%);
+  -o-transform: translateX(-101%);
 }
 #projectSwiper__carousel--content .verticalLine {
   position: absolute;
@@ -1247,6 +1333,7 @@ body {
 }
 #projectSwiper__carousel--content-right h2 {
   height: 20%;
+  white-space: nowrap;
 }
 #projectSwiper__carousel--content-right p {
   text-indent: 1rem;
@@ -1270,70 +1357,9 @@ body {
   border-radius: 4px;
   white-space: nowrap;
 }
-#projectSwiper__carousel--content-right-links {
-  position: absolute;
-  bottom: 0;
-}
-#projectSwiper__carousel--content-right-links a {
-  overflow: hidden;
-  position: relative;
-  display: block;
-  width: 125px;
-  text-decoration: none;
-  transition: all 0.2s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  white-space: nowrap;
-}
-#projectSwiper__carousel--content-right-links a::before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  left: -100%;
-  border-top: 1px solid #efefef;
-  transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-}
-#projectSwiper__carousel--content-right-links a::after {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #efefef;
-  right: -101%;
-  transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-}
-#projectSwiper__carousel--content-right-links a:nth-of-type(2) {
-  margin-top: 1.5vh;
-}
-#projectSwiper__carousel--content-right-links a .icon {
-  position: absolute;
-  right: 0;
-  bottom: 10%;
-}
-#projectSwiper__carousel--content-right-links a:hover::before {
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-}
-#projectSwiper__carousel--content-right-links a:hover::after {
-  transform: translateX(-101%);
-  -webkit-transform: translateX(-101%);
-  -moz-transform: translateX(-101%);
-  -ms-transform: translateX(-101%);
-  -o-transform: translateX(-101%);
+
+#projectSwiper__carousel--content-right-mobile {
+  display: none;
 }
 
 .swiper-button-prev,
@@ -1404,13 +1430,34 @@ body {
     height: 20vh;
     max-height: 15rem;
   }
+  #projectSwiper__carousel--content-left-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  #projectSwiper__carousel--content-left-links a {
+    display: flex;
+    align-items: center;
+    width: 120px;
+  }
+  #projectSwiper__carousel--content-left-links a .icon {
+    position: relative;
+    left: 0.5rem;
+    bottom: 0;
+  }
+  #projectSwiper__carousel--content-left-links a:nth-of-type(2) {
+    margin: 0;
+    margin-right: 0.8rem;
+    right: 0;
+  }
   #projectSwiper__carousel--content-right {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 80%;
     height: 40vh;
-    margin-top: 1vh;
   }
   #projectSwiper__carousel--content-right h2 {
     text-align: center;
@@ -1427,28 +1474,6 @@ body {
     margin-top: 7%;
     text-align: center;
   }
-  #projectSwiper__carousel--content-right-links {
-    display: flex;
-    width: 65%;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 10%;
-  }
-  #projectSwiper__carousel--content-right-links a {
-    display: flex;
-    align-items: center;
-    width: 120px;
-  }
-  #projectSwiper__carousel--content-right-links a .icon {
-    position: relative;
-    left: 0.5rem;
-    bottom: 0;
-  }
-  #projectSwiper__carousel--content-right-links a:nth-of-type(2) {
-    margin: 0;
-    margin-right: 0.8rem;
-    right: 0;
-  }
   #projectSwiper .verticalLine {
     display: none;
   }
@@ -1463,25 +1488,87 @@ body {
   }
   #projects__databaseLink {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     height: auto;
   }
   #projects__databaseLink a {
     margin: 0;
+    font-size: 0.8rem;
+  }
+  #projectCarousel {
+    margin-bottom: 2vh;
   }
   #projectSwiper {
     height: 85%;
     margin: 0;
   }
   #projectSwiper__carousel--content-right {
-    width: 90%;
+    display: none;
   }
-  #projectSwiper__carousel--content-right-links {
-    width: 80%;
-    bottom: 5%;
+  #projectSwiper__carousel--content {
+    margin-top: 3vh;
+  }
+  #projectSwiper__carousel--content-left-links {
+    position: absolute;
+    bottom: 10%;
+  }
+  #projectSwiper__carousel--content-right-mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    margin-top: 3%;
+    text-align: center;
+  }
+  #projectSwiper__carousel--content-right-mobile h2 {
+    text-align: center;
+  }
+  #projectSwiper__carousel--content-right-mobile button {
+    padding: 0.3rem 0.5rem;
+    margin: 1.5vh 0;
+    background-color: #efefef;
+    border: none;
+    border-radius: 1.5px;
+    -webkit-border-radius: 1.5px;
+    -moz-border-radius: 1.5px;
+    -ms-border-radius: 1.5px;
+    -o-border-radius: 1.5px;
+    box-shadow: 0 2px 3px 2px #12252b;
+  }
+  #projectSwiper__carousel--content-right-mobile button:hover {
+    cursor: pointer;
+  }
+  #projectSwiper__carousel--content-right-mobile p {
+    margin: auto;
+    text-align: left;
+    text-indent: 1rem;
+    width: 90%;
+    word-break: normal;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+  #projectSwiper__carousel--content-right-mobile ul {
+    text-indent: 0;
+    align-items: center;
+    list-style-type: none;
+  }
+  #projectSwiper__carousel--content-right-mobile ul > * {
+    flex: 1 2 100px;
+  }
+  #projectSwiper__carousel--content-right-mobile ul li {
+    margin: 0.2rem;
+    background-color: #a1dcf0;
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+    white-space: nowrap;
   }
 }
 @media screen and (max-height: 550px) and (orientation: landscape) {
@@ -1498,6 +1585,29 @@ body {
     width: 90%;
     height: 20%;
   }
+  #projectSwiper__carousel--content-left-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -5%;
+    margin-top: 0.5rem;
+  }
+  #projectSwiper__carousel--content-left-links a {
+    display: flex;
+    align-items: center;
+    width: 150px;
+  }
+  #projectSwiper__carousel--content-left-links a .icon {
+    position: relative;
+    left: 0.5rem;
+    bottom: 0;
+  }
+  #projectSwiper__carousel--content-left-links a:nth-of-type(2) {
+    margin: 0;
+    margin-right: 0.8rem;
+    right: 0;
+  }
   #projectSwiper__carousel--content .verticalLine {
     display: none;
   }
@@ -1510,29 +1620,6 @@ body {
   }
   #projectSwiper__carousel--content-right ul {
     margin-top: 0.5rem;
-  }
-  #projectSwiper__carousel--content-right-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    bottom: -5%;
-    margin-top: 0.5rem;
-  }
-  #projectSwiper__carousel--content-right-links a {
-    display: flex;
-    align-items: center;
-    width: 150px;
-  }
-  #projectSwiper__carousel--content-right-links a .icon {
-    position: relative;
-    left: 0.5rem;
-    bottom: 0;
-  }
-  #projectSwiper__carousel--content-right-links a:nth-of-type(2) {
-    margin: 0;
-    margin-right: 0.8rem;
-    right: 0;
   }
 }
 #navbar {
@@ -1700,7 +1787,7 @@ body {
   #skillsMobile__content--experience-title h2 img, #skillsMobile__content--tools-title h2 img {
     position: absolute;
     height: 130%;
-    width: 45%;
+    width: 50%;
     left: 50%;
     top: -0.2rem;
     transform: translateX(-50%);

@@ -22,6 +22,7 @@ export default function ProjectSwiper() {
     const [projects, setProjects] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [showDescription, setShowDescription] = useState(false);
 
     const logoOptions = {
         loop: true,
@@ -74,6 +75,46 @@ export default function ProjectSwiper() {
                     <div id="projectSwiper__carousel--content-left">
                         <img src={project.imgurl} alt="weather application" />
                     </div>
+                    {!project.processurl ? (
+                        <div id="projectSwiper__carousel--content-left-links">
+                            <a
+                                href={project.codeurl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                See the code
+                                <FontAwesomeIcon
+                                    icon={faLongArrowAltRight}
+                                    className="icon"
+                                />
+                            </a>
+                            <a
+                                href={project.siteurl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                See the site
+                                <FontAwesomeIcon
+                                    icon={faLongArrowAltRight}
+                                    className="icon"
+                                />
+                            </a>
+                        </div>
+                    ) : (
+                        <div id="projectSwiper__carousel--content-left-links">
+                            <a
+                                href={project.processurl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                See the process
+                                <FontAwesomeIcon
+                                    icon={faLongArrowAltRight}
+                                    className="icon"
+                                />
+                            </a>
+                        </div>
+                    )}
                     <div className="verticalLine"></div>
                     <div id="projectSwiper__carousel--content-right">
                         <h2>{project.title}</h2>
@@ -87,46 +128,31 @@ export default function ProjectSwiper() {
                                 ))}
                             </ul>
                         </div>
-                        {!project.processurl ? (
-                            <div id="projectSwiper__carousel--content-right-links">
-                                <a
-                                    href={project.codeurl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    See the code
-                                    <FontAwesomeIcon
-                                        icon={faLongArrowAltRight}
-                                        className="icon"
-                                    />
-                                </a>
-                                <a
-                                    href={project.siteurl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    See the site
-                                    <FontAwesomeIcon
-                                        icon={faLongArrowAltRight}
-                                        className="icon"
-                                    />
-                                </a>
-                            </div>
-                        ) : (
-                            <div id="projectSwiper__carousel--content-right-links">
-                                <a
-                                    href={project.processurl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    See the process
-                                    <FontAwesomeIcon
-                                        icon={faLongArrowAltRight}
-                                        className="icon"
-                                    />
-                                </a>
-                            </div>
-                        )}
+                    </div>
+                    <div id="projectSwiper__carousel--content-right-mobile">
+                        <h2>{project.title}</h2>
+                        <div id="projectSwiper__carousel--content-right-mobile-description">
+                            <button
+                                onClick={() => {
+                                    setShowDescription(!showDescription);
+                                }}
+                            >
+                                {showDescription
+                                    ? "Show Skills Used"
+                                    : "Show Description"}
+                            </button>
+                            {showDescription ? (
+                                <p>{project.description}</p>
+                            ) : (
+                                <ul>
+                                    {project.languages.map((language) => (
+                                        <li key={language}>
+                                            {language.toUpperCase()}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
                     </div>
                 </div>
             </SwiperSlide>

@@ -146,10 +146,11 @@ body {
     }
 }
 
-#projectSwiper__carousel--content-right {
+#projectSwiper__carousel--content-right,
+#projectSwiper__carousel--content-right-mobile {
     & h2 {
         font-size: clamp(1.2rem, 5vw, 2.5rem);
-        color: $color-white;
+        color: $color-light-blue;
     }
     & p {
         font-size: clamp(1rem, 1vw, 1.3rem);
@@ -176,6 +177,12 @@ body {
             -ms-transition: all 0.2s;
             -o-transition: all 0.2s;
         }
+    }
+    & button {
+        text-transform: uppercase;
+        color: $color-black;
+        font-family: $font-proxima;
+        font-weight: $font-proxima-bold;
     }
 }
 
