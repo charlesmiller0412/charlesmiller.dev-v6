@@ -31,10 +31,7 @@ export default function Home() {
                                 I'm Charles!
                             </span>
                         </h1>
-                        <h2>
-                            A Full Stack Developer, Software Engineer,
-                            <br /> &amp; UX/UI Designer
-                        </h2>
+                        <h2>A Full Stack Web Developer & Software Engineer</h2>
                     </div>
                     <div id="home__intro--text-right">
                         <h3>

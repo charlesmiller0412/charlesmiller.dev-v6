@@ -73,7 +73,7 @@ export default function ProjectSwiper() {
             <SwiperSlide key={project._id}>
                 <div id="projectSwiper__carousel--content">
                     <div id="projectSwiper__carousel--content-left">
-                        <img src={project.imgurl} alt="weather application" />
+                        <img src={project.imgurl} alt={project.title} />
                     </div>
                     {!project.processurl ? (
                         <div id="projectSwiper__carousel--content-left-links">

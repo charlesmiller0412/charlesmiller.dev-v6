@@ -457,6 +457,7 @@
                     position: relative;
                     bottom: -5%;
                     margin-top: 0.5rem;
+
                     & a {
                         display: flex;
                         align-items: center;
@@ -466,6 +467,7 @@
                             left: 0.5rem;
                             bottom: 0;
                         }
+
                         &:nth-of-type(2) {
                             margin: 0;
                             margin-right: 0.8rem;
